@@ -15,7 +15,7 @@ MySQL版本：>= 5.6
 
 
 伪静态设置：
-···
+```
 location / {
  if (!-e $request_filename) {
    rewrite ^/(.[a-zA-Z0-9\-\_]+).html$ /index.php?mod=$1 last;
@@ -28,4 +28,4 @@ location ^~ /plugins {
 location ^~ /includes {
   deny all;
 }
-···
+```
